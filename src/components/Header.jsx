@@ -1,6 +1,6 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import epi from '../assets/images/epi.jpg'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import epi from '../assets/images/epi.jpg';
 
 function Header(){
 
@@ -24,6 +24,9 @@ function Header(){
           .flexMe:last-of-type {
             margin-right: 50px;
           }
+          @media screen and (max-width: 575px) {
+            flex-direction: column;
+          }
           `}
       </style>
       <div className="flexMe">
@@ -31,16 +34,16 @@ function Header(){
           <img src={epi}/>
         </div>
         <div>
-          <h1>Help Queue!</h1>
+          <h1>Discussion Forum</h1>
         </div>
         <div>
-          <Link to="/">Home</Link> | <Link to="/newticket">Create Ticket</Link> | <Link to="/admin">Admin</Link>
+          <Link to="/">Forum</Link> | <Link to="/newpost">Create Post</Link>
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 
 
-export default Header
+export default Header;
